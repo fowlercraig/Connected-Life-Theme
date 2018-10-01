@@ -69,6 +69,7 @@ return $content;
 // Add Shortcode
 function ad_shortcode() {
 
+  $blog_id = get_current_blog_id();
   $script = get_field('ad_script');
   $image =  get_field('ad_image');
   $copy =  get_field('ad_copy');
@@ -84,7 +85,7 @@ function ad_shortcode() {
   $output .= $copy;
   $output .= '<div class="post-single__ad-footer-spacer"></div>';
   $output .= '</div>';
-  $output .= '<div class="fs-cell fs-lg-12 fs-md-2 fs-sm-3">';
+  $output .= '<div class="post-single__ad-button fs-cell fs-lg-12 fs-md-2 fs-sm-3">';
   $output .= $script;
   $output .= '</div>';
   $output .= '</div>';

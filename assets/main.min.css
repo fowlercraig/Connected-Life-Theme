@@ -5946,6 +5946,9 @@ Main site content
   width: 100%;
   position: absolute;
 }
+.post-single__ad-button a:last-child {
+  display: none;
+}
 .post-single__ad-footer {
   color: #fff;
   padding: 25px;
