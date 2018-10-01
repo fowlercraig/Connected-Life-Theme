@@ -1,0 +1,82 @@
+.home-feature {
+
+  @media @min {
+    height: 70vh;
+  }
+  @media @tablet {
+    height: calc(~"100vh - 60px");  
+  }
+  
+  background-color: @black;
+
+  &__title {
+    .condensed();
+    color: @white;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 300;
+    margin-bottom: 15px;
+    -webkit-font-smoothing: antialiased;
+    @media @min {
+      font-size: 2.75rem;
+    }
+    @media @tablet {
+      font-size: 3.25rem;
+    }
+    a {
+      color: inherit;
+      display: block;
+      text-decoration: none;
+    }
+  }
+
+  &__controls {
+    color: @white;
+    font-size: 1.3rem;
+    & span, & a {
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+    }
+    & .feather {
+      position: relative;
+      top: 7px;
+    }
+    &-wrapper {
+      position: relative;
+      top: -5px;
+    }
+  }
+
+  &__meta {
+
+    position: absolute;
+    z-index: 50;
+    bottom: 0;
+    left: 0;
+    background-color: @black;
+    box-shadow: 0 10px @spacer rgba(0,0,0,.1);
+    border-bottom: 4px solid;
+
+    @media @min {
+      margin: 8px;
+      padding: @spacer*.75;
+      width: calc(~"100% - 16px");  
+    }
+
+    @media @tablet {
+      width: 66%;
+      margin: @spacer*2;
+      padding: @spacer;
+    }
+
+    &.site-1 {
+      border-color: @red;
+    }
+    &.site-2 {
+      border-color: @blue;
+    }
+
+  }
+
+}

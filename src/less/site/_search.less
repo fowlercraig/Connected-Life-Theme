@@ -1,0 +1,59 @@
+.search {
+
+  z-index: 99;
+  position: relative;
+
+  label {
+    margin-bottom: 0;
+  }
+
+  & &-form, & &-submit {
+    height: 60px;
+    line-height: 60px;
+    display: block;
+  }
+
+  & &-submit {
+    background: transparent;
+    border: 0;
+    width: 100%;
+    text-align: left;
+    color: @white;
+    border-radius: 3px;
+    transition: 300ms ease;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    color: @white!important;
+    text-transform: uppercase;
+    font-size: 2rem;
+    -webkit-font-smoothing: antialiased;
+    .condensed();
+    background: url('chevron-right.svg') center right 5px no-repeat;
+    &:hover {
+      opacity: .9;
+      cursor: pointer;
+    }
+    &-btn {
+      padding: 10px 0;
+    }
+  }
+
+  & &-field {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    color: @white;
+    font-size: 2rem;
+    -webkit-font-smoothing: antialiased;
+    -webkit-appearance: none;
+    &:focus {
+      outline: 0;
+    }
+    &::placeholder {
+      color: @black50;
+    }
+  }
+
+}

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url("https://use.typekit.net/shg3pih.css");
+
+html {
+  font-size: 62.5%
+}
+
+body {
+  color: @textGray;
+  font-family: "urw-din", 'Helvetica', 'Arial', sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  letter-spacing: .025em;
+  line-height: 1.8;
+}
+
+.condensed(){
+  font-family: "din-condensed", sans-serif;
+}
+
+.brand--color {
+  &-home {
+    color: @blue;
+  }
+  &-car {
+    color: @red;
+  }
+}
+
+#site-1 {
+  & .brand--color, .page-content a {
+    color: @red;
+  }
+  & .brand--bg, 
+  & .menu-item-has-children:hover,
+  & .sub-menu,
+  & .post-categories li a {
+    background-color: @red;
+  }
+}
+
+#site-2 {
+  & .brand--color,  .page-content a {
+    color: blue;
+  }
+  & .brand--bg, 
+  & .menu-item-has-children:hover,
+  & .sub-menu,
+  & .post-categories li a {
+    background-color: blue;
+  }
+}

@@ -1,0 +1,2 @@
+$('.wallpaper').background();
+$('.carousel').carousel();

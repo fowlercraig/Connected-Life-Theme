@@ -1,0 +1,28 @@
+.ad {
+
+  &-hero {
+
+    background-color: @black;
+
+    @media @min {
+      height: 66vh;
+    }
+    @media @tablet {
+      height: 66vh;
+    }
+
+  }
+
+  &-parallax {
+    @media @min {
+      width: 100%;
+    }
+    @media @tablet {
+      width: 50%;
+      float: left;
+      min-height: 300px;
+      margin-right: @spacer;
+    }
+  }
+
+}

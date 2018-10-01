@@ -1,0 +1,228 @@
+.post-single {
+
+  position: relative;
+  line-height: 1.5;
+  padding-bottom: @spacer*3;
+
+  &__details {
+    padding: 0 @spacer*.5;
+    border-radius: 2px;
+    color: @white;
+    @media @min {
+      margin-top: @spacer;
+      margin-bottom: @spacer;
+    }
+    @media @tablet {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &-icon {
+      background-color: @black25;
+      display: inline-block!important;
+      @size: 50px;
+      height: @size;
+      width: @size;
+      line-height: @size;
+      text-align: center;
+      border-radius: @size*.5;
+      & .feather {
+        position: relative;
+        top: 38%;
+        transform: translateY(-50%);
+      }
+      &:hover {
+        background-color: @black50;
+      }
+    }
+    &-item {
+      border-bottom: 1px solid @black25;
+      padding: @spacer*.5 0;
+    }
+    &-label {
+      color: @black50;
+      .condensed();
+      text-transform: uppercase;
+    }
+    &-author {
+      margin-bottom: 0;
+    }
+  }
+
+  &__header {
+    padding-top: @spacer*3;
+    padding-bottom: @spacer;
+  }
+
+  &__title {
+    .condensed();
+    font-size: 6rem;
+    line-height: 1;
+    font-weight: 500;
+    color: @black;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    a {
+      color: inherit;
+      display: block;
+      text-decoration: none;
+    }
+    &.large {
+      font-size: 1.95rem;
+    }
+  }
+
+  &__body {
+    & p {
+      margin-bottom: 10px;
+      line-height: 1.65;
+    }
+  }
+
+  &__cats {
+    .condensed();
+    letter-spacing: .5px;
+    z-index: 50;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &__desc {
+    color: @gray;
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: @spacer;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &__readmore {
+    .condensed();
+    font-size: 1.25rem;
+    margin-left: 5px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    &.h {
+      margin-left: 0;
+      display: block;
+    }
+  }
+
+  &__ad {
+    position: relative;
+    margin: @spacer 0;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 10px @spacer rgba(0,0,0,.05);
+    @media @min {
+      width: 100%;
+      height: 500px;
+    }
+    @media @tablet {
+      width: 40%;
+      height: auto;
+      float: left;
+      margin-right: @spacer;
+    }
+    &-header {
+      top: 0;
+      width: 100%;
+      position: absolute;
+    }
+    &-footer {
+      color: @white;
+      padding: @spacer;
+      bottom: 0;
+      width: 100%;
+      position: relative;
+      line-height: 1.4;
+      z-index: 9;
+      & a {
+        border-radius: 2px!important;
+        background: @black25!important;
+        font-size: 2rem!important;
+        transition: 400ms ease;
+        .condensed()!important;
+        width: 100%!important;
+        color: @white!important;
+        border-bottom: 0!important;
+        &:hover {
+          background: @black50!important;
+        }
+      }
+      &-spacer {
+        @media @min {
+          height: 10px;
+        }
+      }
+    }
+    &-body {
+      background-attachment: fixed;
+    }
+    &-body {
+      @media @min {
+        height: 500px;
+        clip: rect(0, auto, auto, 0);
+        overflow: hidden;
+        z-index: -999;
+        position: relative;  
+      }
+      @media @tablet {
+        height: auto;
+        clip: default;
+      }
+      //background-attachment: fixed;
+      & .image {
+        @media @min {
+          position: fixed;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 92%;
+          display: block;
+          height: auto;
+          top: 60px;  
+        }
+        @media @tablet {
+          display: block;
+          position: relative;
+          transform: translateX(0);
+          width: 100%;
+          left: 0;
+          top: 0;
+        }
+        & img {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+}
+
+//.parallax__container {
+//  clip: rect(0, auto, auto, 0);
+//  height: 100%;
+//  left: 0;
+//  overflow: hidden;
+//  position: absolute;
+//  top: 0;
+//  width: 100%;
+//  z-index: -100;
+//}
+//
+//.parallax {
+//  position: fixed;
+//  top: 0;
+//  -webkit-transform: translate3d(0, 0, 0);
+//  transform: translate3d(0, 0, 0);
+//  width: 100%;
+//
+//  /* BG behaviour */
+//  background-position: center;
+//  background-repeat: no-repeat;
+//  background-size: cover;
+//}

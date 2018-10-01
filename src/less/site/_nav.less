@@ -1,0 +1,168 @@
+.nav {
+
+  @height: 60px;
+  background-color: @black;
+  font-size: 1.75rem;
+  position: relative;
+  z-index: 99;
+
+  &.fs-sticky {
+    &-stuck {
+      z-index: 999;
+    }
+  }
+
+  &-main, &-search {
+    position: relative;
+    z-index: 99;
+  }
+
+  &-search {
+    & a {
+      & .feather-search {
+        display: inline;
+      }
+      & .feather-x {
+        display: none;
+      }
+    }
+    & .fs-swap-active {
+      & .feather-search {
+        display: none;
+      }
+      & .feather-x {
+        display: inline;
+      }
+    }
+  }
+
+  & &-logo {
+    font-weight: 600;
+    padding-left: 0!important;
+    @media @min {
+      font-size: 1.75rem;
+    }
+    @media @mobile {
+      font-size: 1.85rem;
+    }
+    & span {
+      font-weight: inherit;
+    }
+  }
+
+  & &-btn, & .menu-item {
+    height: @height;
+    line-height: @height;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    display: inline-block;
+    color: @white;
+    text-decoration: none;
+    margin: 0;
+    padding: 0 15px;
+    transition: 400ms ease;
+    &.first {
+      margin-left: 0;
+    }
+    &.last {
+      margin-right: 0;
+    }
+    &:hover {
+      & a {
+        color: @white75;
+      }
+    }
+    & a {
+      color: @white;
+      text-decoration: none;
+      display: block;
+      transition: 300ms ease;
+    }
+  }
+
+  & .feather {
+    position: relative;
+    top: 7px;
+    width: 18px;
+  }
+
+  & .menu {
+
+    margin: 0;
+
+    &-item {
+
+      &-has-children {
+
+        position: relative;
+        transition: 0;
+        padding-right: @spacer*1.35;
+        background: url('chevron-down.svg') right 15px center no-repeat;
+        background-size: 18px auto;
+
+        &:hover {
+          background: url('chevron-up.svg') right 15px center no-repeat;
+          background-size: 18px auto;
+          & .sub-menu {
+            //opacity: 1;
+            //visibility: visible;
+            display: block;
+          }
+        }
+
+        & .sub-menu {
+          position: absolute;
+          margin: 0;
+          background-color: @black;
+          left: 0;
+          width: 200px;
+          padding: 10px 0;
+          display: none;
+          text-align: left;
+          //opacity: 0;
+          //visibility: hidden;
+          //transition: 300ms ease;
+
+          & .menu-item {
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            text-transform: none;
+            font-size: 1.5rem;
+            font-weight: 300;
+            &:hover {
+              color: @white;
+              background-color: rgba(0,0,0,.1);
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+}
+
+
+#nav {
+  &-search {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    background-color: @white;
+    box-shadow: 0 10px @spacer rgba(0,0,0,.1);
+    transition: 300ms ease;
+    display: none;
+    font-family: "urw-din", 'Helvetica', 'Arial', sans-serif;
+    & input {
+      color: @gray;
+      &::placeholder {
+        color: @lightGray;
+        font-family: "urw-din", 'Helvetica', 'Arial', sans-serif;
+      }
+    }
+    &.fs-swap-active {
+      display: block;
+    }
+  }
+}
