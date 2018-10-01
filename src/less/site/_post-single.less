@@ -226,3 +226,39 @@
 //  background-repeat: no-repeat;
 //  background-size: cover;
 //}
+
+.related {
+  text-align: center;
+  & &-image {
+    margin-bottom: 10px;
+    & img {
+      display: block;
+      width: 100%;
+    }
+  }
+  & &-link {
+    display: block;
+    text-decoration: none;
+    .condensed();
+    text-transform: uppercase;
+  }
+  & &-button {
+    text-align: center;
+  }
+  & .ps_WtbButtonStyle {
+    float: none!important;
+    margin-top: 10px!important;
+    text-transform: uppercase!important;
+    letter-spacing: 1px!important;
+    background-color: #999!important;
+    color: @white!important;
+    text-decoration: none!important;
+    .condensed()!important;
+    line-height: 32px!important;
+    height: 30px!important;
+    font-size: 13px!important;
+    display: inline-block!important;
+    border-radius: 15px!important;
+    padding: 0 20px!important;
+  }
+}

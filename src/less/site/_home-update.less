@@ -25,6 +25,20 @@
     box-shadow: 0 0 @spacer rgba(0,0,0,.05);
   }
 
+  &--title {
+    padding-bottom: 0;
+    border-bottom: 0;
+    .condensed();
+    text-transform: uppercase;
+    color: @black;
+    &:hover {
+      z-index: 1;
+      box-shadow: none;
+    }
+  }
+
+  
+
   &__link {
     .cover();
     z-index: 15;

@@ -1,6 +1,11 @@
 <?php 
-  $related = get_field('related_products'); 
   $blog_id = get_current_blog_id();
+  if ( 1 == $blog_id ){
+    $related = get_field('related_products_home',336); 
+  }
+  if ( 2 == $blog_id ){
+    $related = get_field('related_products_home',336); 
+  }
 ?>
 <?php if($related): ?>
 <hr class="invisible big">
@@ -31,7 +36,9 @@
       <?php if ( 2 == $blog_id ): ?>
       <div class="related-link-wrapper"><a class="related-link brand--color" href="<?php echo $item['title']; ?>">Read the Review</a></div>
       <?php endif; ?>
-      <?php if($item['where_to_buy']): echo $item['where_to_buy']; endif; ?>
+      <div class="related-button">
+        <?php if($item['where_to_buy']): echo $item['where_to_buy']; endif; ?>
+      </div>
     </div>
   </div>
   <?php endforeach; ?>

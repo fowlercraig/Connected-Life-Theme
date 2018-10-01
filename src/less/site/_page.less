@@ -5,24 +5,30 @@
   & &-header {
 
     padding: @spacer 0;
+    position: relative;
 
     @media @tablet {
       padding: @spacer*3 0 @spacer*.75;
     }
 
-    & .pinned {
+    & .center {
+      .center();
+      width: 100%;
+      z-index: 99;
+    }
+
+    & .top {
+      padding-top: 50px;
+      width: 100%;
+      z-index: 99;
+    }
+
+    & .bottom {
       position: absolute;
-      &.middle {
-        .center();
-      }
-      &.top {
-        top: 0;
-        padding-top: @spacer;
-      }
-      &.bottom {
-        bottom: 0;
-        padding-bottom: @spacer;
-      }
+      bottom: 0;
+      padding-bottom: 50px;
+      width: 100%;
+      z-index: 99;
     }
 
     &.has {
@@ -34,23 +40,7 @@
           z-index: 50;
           padding: 0;
           width: 100%;
-
-          // Alignment stuff.
-
-          &.pinned {
-            position: absolute;
-            &.middle {
-              .center();
-            }
-            &.top {
-              top: 0;
-              padding-top: @spacer;
-            }
-            &.bottom {
-              bottom: 0;
-              padding-bottom: @spacer;
-            }
-          }
+          position: relative;
 
           &__title {
             color: @white;
