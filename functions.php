@@ -70,25 +70,42 @@ return $content;
 function ad_shortcode() {
 
   $blog_id = get_current_blog_id();
-  $script = get_field('ad_script');
-  $image =  get_field('ad_image');
-  $copy =  get_field('ad_copy');
+
+  if(get_field('ad_script')){
+    // Local to post page
+    $script = get_field('ad_script');
+    $image =  get_field('ad_image');
+    $copy =  get_field('ad_copy');
+  } else {
+    if ( 1 == $blog_id ){ // Car Life
+      $script = get_field('home_ad_script', 336);
+      $image =  get_field('default_post_image', 336);
+      $copy =  get_field('home_ad_copy', 336);
+    }
+    if ( 2 == $blog_id ){ // Home Life
+      $script = get_field('home_ad_script', 336);
+      $image =  get_field('default_post_image', 336);
+      $copy =  get_field('home_ad_copy', 336);
+    }
+  }
 
   $output  = '<div class="post-single__ad">';
   $output .= '<div class="post-single__ad-header"></div>';
   #$output .= '<div class="post-single__ad-body parallax" style="background-image:url(' . $image . ');">';
   $output .= '<div class="post-single__ad-body parallax" data-parallax-image="' . $image . '">';
   $output .= '<div class="image"><img src="' . $image . '" class="img-responsive"></div></div>';
-  $output .= '<div class="post-single__ad-footer brand--bg">';
-  $output .= '<div class="fs-row">';
-  $output .= '<div class="fs-cell fs-lg-12 fs-md-4 fs-sm-3">';
-  $output .= $copy;
-  $output .= '<div class="post-single__ad-footer-spacer"></div>';
-  $output .= '</div>';
-  $output .= '<div class="post-single__ad-button fs-cell fs-lg-12 fs-md-2 fs-sm-3">';
-  $output .= $script;
-  $output .= '</div>';
-  $output .= '</div>';
+  if($script || $copy){
+    $output .= '<div class="post-single__ad-footer brand--bg">';
+    $output .= '<div class="fs-row">';
+    $output .= '<div class="fs-cell fs-lg-12 fs-md-4 fs-sm-3">';
+    $output .= $copy;
+    $output .= '<div class="post-single__ad-footer-spacer"></div>';
+    $output .= '</div>';
+    $output .= '<div class="post-single__ad-button fs-cell fs-lg-12 fs-md-2 fs-sm-3">';
+    $output .= $script;
+    $output .= '</div>';
+    $output .= '</div>';
+  }
   $output .= '</div>';
   $output .= '</div>';
 
