@@ -10,6 +10,21 @@
       padding: @spacer*3 0 @spacer*.75;
     }
 
+    & .pinned {
+      position: absolute;
+      &.middle {
+        .center();
+      }
+      &.top {
+        top: 0;
+        padding-top: @spacer;
+      }
+      &.bottom {
+        bottom: 0;
+        padding-bottom: @spacer;
+      }
+    }
+
     &.has {
       &--video {
         height: 50vh;
