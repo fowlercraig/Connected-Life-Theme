@@ -5304,6 +5304,8 @@ Main site content
 .page .page-content .wp-post-image,
 .page .page-content img {
   margin-bottom: 25px;
+  display: block;
+  max-width: 100%;
 }
 @media screen and (min-width: 980px) {
 }
