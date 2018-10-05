@@ -141,7 +141,7 @@
       height: 500px;
     }
     @media @tablet {
-      width: 40%;
+      width: 320px;
       height: auto;
       float: left;
       margin-right: @spacer;
@@ -163,7 +163,6 @@
       padding: 15px @spacer 10px;
       bottom: 0;
       width: 100%;
-      
       line-height: 1.4;
       z-index: 9;
       line-height: 1;
@@ -200,7 +199,13 @@
     &-body {
       background-attachment: fixed;
     }
+    &-link {
+      display: block;
+      .cover();
+      z-index: 40;
+    }
     &-body {
+      position: relative;
       @media @min {
         height: 500px;
         clip: rect(0, auto, auto, 0);
@@ -210,7 +215,7 @@
         background-color: @black; 
       }
       @media @tablet {
-        height: auto;
+        height: 200px;
         clip: default;
         z-index: 1;
         background-color: transparent;

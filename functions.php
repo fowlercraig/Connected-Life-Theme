@@ -76,20 +76,26 @@ function ad_shortcode() {
     $script = get_field('ad_script');
     $image =  get_field('ad_image');
     $copy =  get_field('ad_copy');
+    $url =  get_field('ad_url');
   } else {
     if ( 1 == $blog_id ){ // Car Life
       $script = get_field('home_ad_script', 336);
       $image =  get_field('default_post_image', 336);
       $copy =  get_field('home_ad_copy', 336);
+      $url =  get_field('home_ad_url', 336);
     }
     if ( 2 == $blog_id ){ // Home Life
       $script = get_field('home_ad_script', 336);
       $image =  get_field('default_post_image', 336);
       $copy =  get_field('home_ad_copy', 336);
+      $url =  get_field('home_ad_url', 336);
     }
   }
 
   $output  = '<div class="post-single__ad">';
+    if($url){
+        $output .= '<a class="post-single__ad-link" href="' . $url . '"></a>';  
+      };
     $output .= '<div class="post-single__ad-body">';
       $output .= '<div class="image"><img src="' . $image . '" class="img-responsive"></div>';
     $output .= '</div>';

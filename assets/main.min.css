@@ -5373,7 +5373,7 @@ Main site content
   margin-bottom: 4px;
   line-height: 1;
   letter-spacing: -1px;
-  text-shadow: 0 5px 25px #111;
+  text-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 }
 @media screen and (min-width: 740px) {
   .page .page-header__title {
@@ -6063,7 +6063,7 @@ Main site content
 }
 @media screen and (min-width: 740px) {
   .post-single__ad {
-    width: 40%;
+    width: 320px;
     height: auto;
     float: left;
     margin-right: 25px;
@@ -6118,6 +6118,18 @@ Main site content
 .post-single__ad-body {
   background-attachment: fixed;
 }
+.post-single__ad-link {
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 40;
+}
+.post-single__ad-body {
+  position: relative;
+}
 @media screen and (min-width: 300px) {
   .post-single__ad-body {
     height: 500px;
@@ -6130,7 +6142,7 @@ Main site content
 }
 @media screen and (min-width: 740px) {
   .post-single__ad-body {
-    height: auto;
+    height: 200px;
     clip: default;
     z-index: 1;
     background-color: transparent;
