@@ -50,7 +50,7 @@
     </div>
     <div id="home-top-sm" class="fs-cell fs-lg-2 fs-md-full fs-sm-hide fs-contained">
       <div class="home-update home-update--title">
-        <div class="feed-title">Most Viewed</div>
+        <div class="feed-title">Popular Articles</div>
       </div>
 <?php 
   $args = array(

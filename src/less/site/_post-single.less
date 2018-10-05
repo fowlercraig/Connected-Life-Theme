@@ -160,12 +160,24 @@
     }
     &-footer {
       color: @white;
-      padding: @spacer;
+      padding: 15px @spacer 10px;
       bottom: 0;
       width: 100%;
-      position: relative;
+      
       line-height: 1.4;
       z-index: 9;
+      line-height: 1;
+      
+      @media @min {
+        position: absolute;  
+        bottom: 0;
+      }
+      @media @tablet {
+        position: relative;
+      }
+      & p {
+
+      }
       & a {
         border-radius: 2px!important;
         background: @black25!important;
@@ -194,11 +206,14 @@
         clip: rect(0, auto, auto, 0);
         overflow: hidden;
         z-index: -999;
-        position: relative;  
+        position: relative; 
+        background-color: @black; 
       }
       @media @tablet {
         height: auto;
         clip: default;
+        z-index: 1;
+        background-color: transparent;
       }
       //background-attachment: fixed;
       & .image {

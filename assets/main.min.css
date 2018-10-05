@@ -4375,6 +4375,8 @@ h6 {
   transition: transform 300ms ease;
   transition: transform 300ms ease, -webkit-transform 300ms ease;
   background-color: #fff;
+  z-index: 9;
+  position: relative;
 }
 @media screen and (min-width: 300px) {
   #wrapper.fs-swap-active {
@@ -4608,6 +4610,7 @@ h6 {
   right: 0;
   width: 60%;
   padding: 20px 25px;
+  z-index: 0;
 }
 @media screen and (min-width: 300px) {
   #nav-mobile {
@@ -5254,6 +5257,23 @@ Main site content
 }
 .page {
   -webkit-font-smoothing: antialiased;
+}
+.page .wp-post-image,
+.page img {
+  margin-bottom: 25px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.page .wp-post-image.alignleft,
+.page img.alignleft {
+  float: left;
+  margin-right: 20px;
+}
+.page .wp-post-image.alignright,
+.page img.alignright {
+  float: right;
+  margin-left: 20px;
 }
 .page .page-header {
   padding: 25px 0;
@@ -6059,12 +6079,23 @@ Main site content
 }
 .post-single__ad-footer {
   color: #fff;
-  padding: 25px;
+  padding: 15px 25px 10px;
   bottom: 0;
   width: 100%;
-  position: relative;
   line-height: 1.4;
   z-index: 9;
+  line-height: 1;
+}
+@media screen and (min-width: 300px) {
+  .post-single__ad-footer {
+    position: absolute;
+    bottom: 0;
+  }
+}
+@media screen and (min-width: 740px) {
+  .post-single__ad-footer {
+    position: relative;
+  }
 }
 .post-single__ad-footer a {
   border-radius: 2px!important;
@@ -6094,12 +6125,15 @@ Main site content
     overflow: hidden;
     z-index: -999;
     position: relative;
+    background-color: #111;
   }
 }
 @media screen and (min-width: 740px) {
   .post-single__ad-body {
     height: auto;
     clip: default;
+    z-index: 1;
+    background-color: transparent;
   }
 }
 @media screen and (min-width: 300px) {

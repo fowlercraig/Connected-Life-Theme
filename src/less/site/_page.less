@@ -2,6 +2,21 @@
 
   -webkit-font-smoothing: antialiased;
 
+  & .wp-post-image, & img {
+    margin-bottom: @spacer;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    &.alignleft {
+      float: left;
+      margin-right: 20px;
+    }
+    &.alignright {
+      float: right;
+      margin-left: 20px;
+    }
+  }
+
   & &-header {
 
     padding: @spacer 0;

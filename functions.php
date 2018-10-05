@@ -71,7 +71,7 @@ function ad_shortcode() {
 
   $blog_id = get_current_blog_id();
 
-  if(get_field('ad_script')){
+  if(get_field('ad_copy')){
     // Local to post page
     $script = get_field('ad_script');
     $image =  get_field('ad_image');
@@ -90,24 +90,24 @@ function ad_shortcode() {
   }
 
   $output  = '<div class="post-single__ad">';
-  $output .= '<div class="post-single__ad-header"></div>';
-  #$output .= '<div class="post-single__ad-body parallax" style="background-image:url(' . $image . ');">';
-  $output .= '<div class="post-single__ad-body parallax" data-parallax-image="' . $image . '">';
-  $output .= '<div class="image"><img src="' . $image . '" class="img-responsive"></div></div>';
-  if($script || $copy){
+    $output .= '<div class="post-single__ad-body">';
+      $output .= '<div class="image"><img src="' . $image . '" class="img-responsive"></div>';
+    $output .= '</div>';
+    if($script || $copy){
     $output .= '<div class="post-single__ad-footer brand--bg">';
-    $output .= '<div class="fs-row">';
-    $output .= '<div class="fs-cell fs-lg-12 fs-md-4 fs-sm-3">';
-    $output .= $copy;
-    $output .= '<div class="post-single__ad-footer-spacer"></div>';
+      $output .= '<div class="fs-row">';
+        $output .= '<div class="fs-cell fs-lg-12 fs-md-4 fs-sm-3">';
+          $output .= $copy;
+          $output .= '<div class="post-single__ad-footer-spacer"></div>';
+        $output .= '</div>';
+        $output .= '<div class="post-single__ad-button fs-cell fs-lg-12 fs-md-2 fs-sm-3">';
+          $output .= $script;
+        $output .= '</div>';
+      $output .= '</div>';
     $output .= '</div>';
-    $output .= '<div class="post-single__ad-button fs-cell fs-lg-12 fs-md-2 fs-sm-3">';
-    $output .= $script;
-    $output .= '</div>';
-    $output .= '</div>';
-  }
+    };
   $output .= '</div>';
-  $output .= '</div>';
+
 
   return $output;
   

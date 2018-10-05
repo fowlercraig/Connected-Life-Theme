@@ -12,6 +12,8 @@ body,html {
   margin: auto;
   transition: transform 300ms ease;
   background-color: @white;
+  z-index: 9;
+  position: relative;
   &.fs-swap-active {
     @media @min {
       transform: translateX(-60%);  
