@@ -15,7 +15,7 @@
 <hr class="invisible">
 
 <?php get_template_part( 'parts/home', 'latest' ); ?>
-<?php #get_template_part( 'parts/home', 'ad' ); ?>
+<?php get_template_part( 'parts/home', 'ad' ); ?>
 <?php #get_template_part( 'parts/home', 'stories' ); ?>
 </div>
 

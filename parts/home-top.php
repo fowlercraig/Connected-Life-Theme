@@ -1,7 +1,7 @@
 <div id="home-top" class="fs-grid-fluid">
   <div class="fs-row">
     <div id="home-top-lg" class="fs-cell fs-lg-half fs-md-half fs-sm-full fs-contained">
-      <div class="sticky" data-sticky-options='{"offset":60,"minWidth":"500px"}' data-sticky-container="#home-top">
+      <div class="sticky" data-sticky-options='{"offset":60,"minWidth":"740px"}' data-sticky-container="#home-top">
         <div class="home-top-carousel carousel" data-carousel-options='{"pagination":false, "infinite": true, "controls":false}'>
 
 <?php 
@@ -48,7 +48,7 @@
 ?>          
 
     </div>
-    <div id="home-top-sm" class="fs-cell fs-lg-2 fs-md-full fs-contained">
+    <div id="home-top-sm" class="fs-cell fs-lg-2 fs-md-full fs-sm-hide fs-contained">
       <div class="home-update home-update--title">
         <div class="feed-title">Most Viewed</div>
       </div>

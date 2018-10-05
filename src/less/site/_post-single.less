@@ -19,16 +19,34 @@
     &-icon {
       background-color: @black25;
       display: inline-block!important;
-      @size: 50px;
-      height: @size;
-      width: @size;
-      line-height: @size;
       text-align: center;
-      border-radius: @size*.5;
+
+      @media @min {
+        @size: 30px;
+        height: @size;
+        width: @size;
+        line-height: @size;
+        border-radius: @size*.5;
+      }
+      @media @tablet {
+        @size: 50px; 
+        height: @size;
+        width: @size;
+        line-height: @size;
+        border-radius: @size*.5;
+      }
+      
+
       & .feather {
         position: relative;
-        top: 38%;
+        @media @min {
+          top: 50%;  
+        }
+        @media @tablet {
+          top: 38%;  
+        }
         transform: translateY(-50%);
+        width: 50%;
       }
       &:hover {
         background-color: @black50;

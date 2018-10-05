@@ -1,9 +1,9 @@
 body,html {
   @media @min {
-    //background-color: #222;
+    background-color: #222;
   }
   @media @desktop {
-    //background-color: #EEEEEE;  
+    background-color: #EEEEEE;  
   }
 }
 
@@ -11,8 +11,14 @@ body,html {
   max-width: 1600px;
   margin: auto;
   transition: transform 300ms ease;
+  background-color: @white;
   &.fs-swap-active {
-    transform: translateX(-75%);
+    @media @min {
+      transform: translateX(-60%);  
+    }
+    @media @tablet {
+      transform: translateX(0);  
+    }
   }
 }
 

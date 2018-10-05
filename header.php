@@ -28,6 +28,7 @@ new Function("if ((/loaded|completed/i).test(this.readyState)) pswtb.loader.fini
 </head>
 
 <body class="fs-grid" id="site-<?php echo get_current_blog_id() ?>">
+  <?php include locate_template('parts/nav-mobile.php'); ?>
   <div id="wrapper">
     <?php include locate_template('parts/nav.php'); ?>
     <div id="content">
