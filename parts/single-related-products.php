@@ -31,10 +31,10 @@
       </div>
       <div class="related-title"><?php echo $item['title']; ?></div>
       <?php if ( 1 == $blog_id ): ?>
-      <div class="related-link-wrapper"><a class="related-link brand--color" href="<?php echo $item['title']; ?>">Read the Review</a></div>
+      <div class="related-link-wrapper"><a class="related-link brand--color" href="<?php echo $item['review_link']; ?>">Read the Review</a></div>
       <?php endif; ?>
       <?php if ( 2 == $blog_id ): ?>
-      <div class="related-link-wrapper"><a class="related-link brand--color" href="<?php echo $item['title']; ?>">Read the Review</a></div>
+      <div class="related-link-wrapper"><a class="related-link brand--color" href="<?php echo $item['review_link']; ?>">Read the Review</a></div>
       <?php endif; ?>
       <div class="related-button">
         <?php if($item['where_to_buy']): echo $item['where_to_buy']; endif; ?>
