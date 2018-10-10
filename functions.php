@@ -94,7 +94,7 @@ function ad_shortcode() {
 
   $output  = '<div class="post-single__ad">';
     if($url){
-        $output .= '<a class="post-single__ad-link" href="' . $url . '"></a>';  
+        $output .= '<a target="blank" class="post-single__ad-link" href="' . $url . '"></a>';  
       };
     $output .= '<div class="post-single__ad-body">';
       $output .= '<div class="image"><img src="' . $image . '" class="img-responsive"></div>';

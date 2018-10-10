@@ -12,8 +12,8 @@
           <?php endif; ?>
         </div>
         <div class='fs-cell fs-all-half text-right'>
-          <a href="/" class="nav-btn">Privacy Policy</a>
-          <a href="/" class="nav-btn">Terms & Conditions</a>
+          <a href="/privacy-policy/" class="nav-btn">Privacy Policy</a>
+          <a href="/terms-conditions/" class="nav-btn">Terms & Conditions</a>
         </div>
       </div>
     </footer>
