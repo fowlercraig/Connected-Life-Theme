@@ -44,20 +44,6 @@ src="https://www.facebook.com/tr?id=871722699638521&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
 
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WBT9QB"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-WBT9QB');</script>
-<!-- End Google Tag Manager -->
-
-<!-- IDG Pixel Code -->
-<img src="http://pubads.g.doubleclick.net/activity;xsp=231656;ord=1?" width=1 height=1 border=0/>
-</noscript>
-
 <?php wp_head(); ?>
 
 </head>
