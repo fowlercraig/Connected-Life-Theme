@@ -82,13 +82,13 @@ function ad_shortcode() {
       $script = get_field('home_ad_script', 336);
       $image =  get_field('default_post_image', 336);
       $copy =  get_field('home_ad_copy', 336);
-      $url =  get_field('home_ad_url', 336);
+      $url =  get_field('post_ad_link', 336);
     }
     if ( 2 == $blog_id ){ // Home Life
       $script = get_field('home_ad_script', 336);
       $image =  get_field('default_post_image', 336);
       $copy =  get_field('home_ad_copy', 336);
-      $url =  get_field('home_ad_url', 336);
+      $url =  get_field('post_ad_link', 336);
     }
   }
 
