@@ -2,21 +2,21 @@
 
 // Dependencies
 require_once ('lib/default.php');
-require_once ('lib/advanced-custom-fields-pro/acf.php' );
+//require_once ('lib/advanced-custom-fields-pro/acf.php' );
 require_once ('lib/soil/soil.php' );
 require_once ('lib/roots-rewrites-master/roots-rewrites.php' );
 
 // Includes
-function my_acf_settings_path( $path ) {
-  $path = get_stylesheet_directory() . '/lib/advanced-custom-fields-pro/';
-  return $path;
-}
-add_filter('acf/settings/path', 'my_acf_settings_path');
-function my_acf_settings_dir( $dir ) {
- $dir = get_stylesheet_directory_uri() . '/lib/advanced-custom-fields-pro/';
- return $dir;
-}
-add_filter('acf/settings/dir', 'my_acf_settings_dir');
+//function my_acf_settings_path( $path ) {
+//  $path = get_stylesheet_directory() . '/lib/advanced-custom-fields-pro/';
+//  return $path;
+//}
+//add_filter('acf/settings/path', 'my_acf_settings_path');
+//function my_acf_settings_dir( $dir ) {
+// $dir = get_stylesheet_directory_uri() . '/lib/advanced-custom-fields-pro/';
+// return $dir;
+//}
+//add_filter('acf/settings/dir', 'my_acf_settings_dir');
 
 //add_theme_support('soil-relative-urls');
 add_theme_support('soil-nice-search');
