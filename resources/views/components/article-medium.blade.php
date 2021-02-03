@@ -9,7 +9,7 @@
         ])
       </div>
       <span class="absolute m-4 py-1 px-3 rounded-full bg-red-600 text-white uppercase text-xs font-medium">
-        {!! $cat !!}
+        @php $category = get_the_category(); echo $category[0]->cat_name; @endphp
       </span>
     </div>
     <div class="space-y-2">

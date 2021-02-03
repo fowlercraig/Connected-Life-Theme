@@ -22,4 +22,3 @@ tnsCarousel.forEach(slider => {
     navContainer: ".tns-slider__nav",
   });
 });
-
