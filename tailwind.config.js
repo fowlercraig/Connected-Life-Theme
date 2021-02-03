@@ -1,9 +1,23 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  purge: [],
+  purge: {
+    enabled: false,
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
+    typography: (theme) => ({
+      DEFAULT: {
+        css: {
+          a: {
+            color: 'red',
+            '&:hover': {
+              color: theme('colors.red.700'),
+            },
+          },
+        },
+      },
+    }),
     container: {
       center: true,
       padding: {

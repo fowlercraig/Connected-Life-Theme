@@ -5,13 +5,14 @@
         @include('components.image',[ 
           'id'    => get_post_thumbnail_id(), 
           'size'  => 'large', 
-          'class' => 'object-cover object-center w-full h-full opacity-60'
+          'class' => 'object-cover object-center w-full h-full opacity-90'
         ])
       </div>
     </div>
     <div class="absolute inset-x-0 bottom-0">
-      <div class="container py-8 text-white">
-        <h1 class="entry-title text-white text-4xl md:text-6xl lg:text-7xl font-condensed uppercase leading-none">
+      <div class="container py-8 text-white space-y-2">
+        <div class="uppercase font-condensed bg-red-600 text-white inline-block px-2 antialiased">{!! get_the_category_list(' / ','multiple') !!}</div>
+        <h1 class="entry-title text-white text-4xl md:text-6xl lg:text-7xl font-condensed uppercase leading-none" style="text-shadow: 0 5px 20px rgba(0,0,0,.5">
           {!! $title !!}
         </h1>
       </div>

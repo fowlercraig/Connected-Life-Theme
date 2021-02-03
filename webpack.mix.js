@@ -14,6 +14,8 @@ require('laravel-mix-copy-watched');
  |
  */
 
+const whitelistPatterns = require('purgecss-with-wordpress').whitelistPatterns; 
+
 mix
   .setPublicPath('./dist')
   .browserSync('connectedcarlife.dev.cc');
@@ -24,7 +26,7 @@ mix
   .purgeCss({
     extend: { content: [path.join(__dirname, 'index.php')] },
     whitelist: require('purgecss-with-wordpress').whitelist,
-    whitelistPatterns: require('purgecss-with-wordpress').whitelistPatterns,
+     whitelistPatterns: [/^(is-|has-|will-|js-|fs-|feather-|word-|aos-|wp-|aspect-|embed-|tns-|alm-)/],
   });
 
 mix

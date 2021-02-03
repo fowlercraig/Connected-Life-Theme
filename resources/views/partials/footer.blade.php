@@ -11,3 +11,8 @@
     </ul>
   </div>
 </footer>
+
+<div class="hidden md:block max-w-xs float-left mr-6 hidden"></div>
+<div class="block md:hidden h-screen/2" style="clip-path:inset(0 0 0 0);">
+  <div class="fixed inset-x-0 h-screen-header top-0 flex items-center"></div>
+</div>
