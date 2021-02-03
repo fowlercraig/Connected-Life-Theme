@@ -60,6 +60,17 @@ add_action('after_setup_theme', function () {
     ]);
 
     /**
+     * Enable custom image sizes
+     */
+    add_image_size( 'gallery-xs', 85  , 35,  true );
+    add_image_size( 'gallery-sm', 320 , 320, true );
+    add_image_size( 'gallery-md', 800 , 533, true );
+    add_image_size( 'gallery-lg', 1280, 720, true );
+    add_image_size( 'story-md', 765, 325, true );
+    add_image_size( 'story-feat', 720, 1280, true );
+
+
+    /**
      * Enable plugins to manage the document title
      * @link https://developer.wordpress.org/reference/functions/add_theme_support/#title-tag
      */

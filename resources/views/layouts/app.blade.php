@@ -1,15 +1,7 @@
-@include('partials.header')
-
-<div class="container">
+<section x-data="{ mobile:false, search:false }" @keydown.window.escape="mobile = false">
+  @include('partials.header')
   <main class="main">
     @yield('content')
   </main>
-
-  @hasSection('sidebar')
-    <aside class="sidebar">
-      @yield('sidebar')
-    </aside>
-  @endif
-</div>
-
-@include('partials.footer')
+  @include('partials.footer')
+</section>

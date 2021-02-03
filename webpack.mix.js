@@ -16,7 +16,7 @@ require('laravel-mix-copy-watched');
 
 mix
   .setPublicPath('./dist')
-  .browserSync('sage.test');
+  .browserSync('connectedcarlife.dev.cc');
 
 mix
   .sass('resources/assets/styles/app.scss', 'styles')
@@ -39,6 +39,11 @@ mix
 
 mix
   .autoload({ jquery: ['$', 'window.jQuery'] })
-  .options({ processCssUrls: false })
+  .options({ 
+    processCssUrls: false,
+    postCss: [
+      require('tailwindcss')('./tailwind.config.js'),
+    ]
+  })
   .sourceMaps(false, 'source-map')
   .version();

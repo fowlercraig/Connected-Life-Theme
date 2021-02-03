@@ -1,12 +1,12 @@
-/** Config */
-@import 'config/variables';
-@import 'config/external';
+@tailwind base;
 
-/** Common */
-@import 'common/global';
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import url('https://use.typekit.net/shg3pih.css');
 
-/** Components */
-@import 'components';
+/* purgecss start ignore */
+@import '~tiny-slider/dist/tiny-slider.css';
+/* purgecss end ignore */
 
-/** Partials */
-@import 'partials/header';
+@tailwind components;
+@tailwind utilities;

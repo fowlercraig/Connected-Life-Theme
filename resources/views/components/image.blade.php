@@ -1,0 +1,1 @@
+@php echo wp_get_attachment_image( $id, $size, '', array( 'class' => $class ) ) @endphp
